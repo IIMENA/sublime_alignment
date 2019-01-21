@@ -1,0 +1,114 @@
+.select_chart_circles{
+	width: 5%;
+    float: left;
+}
+
+.main_chart_alignment{
+	width: 80%;
+	float: right;
+}
+
+#selector_tooltip {
+position: absolute;
+width: 300px;
+height: auto;
+padding: 10px;
+background-color: white;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+pointer-events: none;
+}
+
+#selector_tooltip.hidden {
+display: none;
+}
+
+
+#selector_tooltip p {
+margin: 0;
+font-family: sans-serif;
+font-size: 16px;
+line-height: 20px;
+}
+
+#gene_tooltip {
+position: absolute;
+width: 300px;
+height: auto;
+padding: 10px;
+background-color: white;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+pointer-events: none;
+}
+
+#gene_tooltip.hidden {
+display: none;
+}
+
+
+#gene_tooltip p {
+margin: 0;
+font-family: sans-serif;
+font-size: 16px;
+line-height: 20px;
+}
+
+#alignment_tooltip {
+position: absolute;
+width: 300px;
+height: auto;
+padding: 10px;
+background-color: white;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+pointer-events: none;
+}
+
+#alignment_tooltip.hidden {
+display: none;
+}
+
+#alignment_tooltip p {
+margin: 0;
+font-family: sans-serif;
+font-size: 16px;
+line-height: 20px;
+}
+
+
+#network_tooltip {
+position: absolute;
+width: 200px;
+height: auto;
+padding: 10px;
+background-color: white;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+pointer-events: none;
+}
+
+#network_tooltip.hidden {
+display: none;
+}
+/*.gene_tooltip p {
+font-family: sans-serif;
+font-size: 16px;
+line-height: 20px;
+}*/
