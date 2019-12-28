@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+test_data_2/
 # Mac junk
 .DS_Store
 # C extensions
