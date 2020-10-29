@@ -33,5 +33,5 @@ def get_similarity_scores_on_as_object(nodes, edge_dict):
 def get_cds_count(obj):
 	if isinstance(obj,secmet.record.Record):
 		return len(obj.get_cds_features())
-	elif isinstance(obj,secmet.features.cluster.Cluster) or isinstance(obj,secmet.features.region.Region):
+	elif isinstance(obj,secmet.features.protocluster.Protocluster) or isinstance(obj,secmet.features.region.Region):
 		return len(obj.cds_children)

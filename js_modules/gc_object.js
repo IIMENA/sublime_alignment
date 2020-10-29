@@ -34,9 +34,6 @@ class AlignmentData{
 		for (var i = 0; i < froms.length; i++) {
 			var tos = Object.values(froms[i]);
 			for (var n = 0; n < tos.length; n++) {
-				// console.log(tos[n][0])
-
-				// console.log(tos[n][0].from.name)
 				tos[n].map(d=> d.reverse(this.clusters[gc_id]));
 			}
 		}

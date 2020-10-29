@@ -37,13 +37,13 @@ function draw_gene_cluster_tracks(dat, svg, x_scale, y_scale, t){
               return y_scale(d.Name);
             })
             .style("width", function(d) {
-              return x_scale(d.Length)+"px";
+              return x_scale(d.Length)-10+"px";
             })
             .style("height", "20px")
             .style("fill","grey")
             .style("fill-opacity", 0.3)
-            .style("stroke", "black")
-            .style("stroke-width", "2px")
+            // .style("stroke", "black")
+            // .style("stroke-width", "0px")
             .style("stroke-opacity", 0.3);
 
 
@@ -71,9 +71,9 @@ function draw_gene_cluster_tracks(dat, svg, x_scale, y_scale, t){
       // .on("click", focus_alignment_combined)
       .on("mouseover", gene_mouseover)
       .on("mouseout", gene_mouseout)
-      .style("fill", "teal")
-      .style("stroke", "black")
-      .style("stroke-width", "2px");
+      .style("fill", "teal");
+      // .style("stroke", "black")
+      // .style("stroke-width", "1px");
 };
 
 var Track_key = function(d){

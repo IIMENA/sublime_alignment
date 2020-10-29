@@ -20,15 +20,15 @@ import {get_mibig_suggestion} from "./mibig.js"
 
   var region_or_cluster = convert_chosen_string_to_array($('#region_or_cluster_selector').chosen().val());
   if (region_or_cluster.includes("show_regions") && !region_or_cluster.includes("show_clusters")) {
-    plot_nodes = plot_nodes.filter(d => d.includes("_r")) + mibig_nodes;
+    plot_nodes = plot_nodes.filter(d => d.includes("_r")).concat(mibig_nodes);
   } else if (region_or_cluster.includes("show_clusters") && !region_or_cluster.includes("show_regions")){
-    plot_nodes = plot_nodes.filter(d => d.includes("_c")) + mibig_nodes;
+    plot_nodes = plot_nodes.filter(d => d.includes("_c")).concat(mibig_nodes);
   } else if (region_or_cluster.includes("show_clusters") && region_or_cluster.includes("show_regions")){
     plot_nodes = plot_nodes;
   } else {
     plot_nodes = [];
   }
-
+  
   populate_menu("#gene_cluster_highlighter", plot_nodes);
   return plot_nodes;
   };

@@ -22,9 +22,9 @@ function activate_node(selected_circle, active_nodes, node_store, alignment_stor
     selected_circle.style("stroke", "green");
     active_nodes.push(tmp_node);
 
-    var node_dir = "test_data/gene_clusters/"+get_node_org_id(tmp_node)+"/"+tmp_node+".json";
+    var node_dir = "data/results/gene_clusters/"+get_node_org_id(tmp_node)+"/"+tmp_node+".json";
     d3.json(node_dir).then(function(tmp_node_data){
-    d3.json("test_data/alignments/"+get_node_org_id(tmp_node)+"/"+tmp_node+".json").then(function(tmp_alignment_data){
+    d3.json("data/results/alignments/"+get_node_org_id(tmp_node)+"/"+tmp_node+".json").then(function(tmp_alignment_data){
         node_store[tmp_node] = tmp_node_data;
         alignment_store[tmp_node] = tmp_alignment_data;
         var dat = new AlignmentData(Object.values(node_store).flat(), Object.values(alignment_store).flat());

@@ -9,10 +9,12 @@ class network_chart{
 	link_key(d){return d.link_key;};
 
 	network_hover_over(d){
-		var coordinates = d3.mouse(this);
+		// var coordinates = d3.mouse(this);
 		d3.select("#network_tooltip")
-		.style("left", coordinates[0]+"px")
-		.style("top", coordinates[1]+"px")
+		// .style("left", coordinates[0]+"px")
+		// .style("top", coordinates[1]+"px")
+		.style("left", d3.event.pageX+"px")
+		.style("top", d3.event.pageY-20+"px")
 		.select("#name").text(d.id);
 		d3.select("#network_tooltip").select("#family").text(d.family);
 		d3.select("#network_tooltip").select("#product").text(d.product);

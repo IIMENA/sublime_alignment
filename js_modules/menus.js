@@ -50,7 +50,8 @@ function get_the_nodes(gc_by_class, orgs_selected, products_selected, mibig_bgc_
 			if (gc_keys.includes(both_selected)) {all_nodes_to_plot.push(gc_by_class[both_selected])}
 		}
 	}
-	return all_nodes_to_plot.flat().concat(mibig_bgc_selected).concat(mibig_subset) // TODO check if it's a flat array
+	var nodes_to_plot =  all_nodes_to_plot.flat().concat(mibig_bgc_selected).concat(mibig_subset); // TODO check if it's a flat array
+	return nodes_to_plot;
 };
 
 function  get_links(d, plot_nodes, edge_cutoff){

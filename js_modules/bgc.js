@@ -5,6 +5,8 @@ class Bgc{
 		this.track = args.Track;
 		this.cdss = this.format_cdss(args.CDSs);
 		this.Length = this.track.Length;
+        this.max_cds = d3.max(args.CDSs.map(x => x.start).concat(args.CDSs.map(x => x.end)))
+        this.spacer = this.Length - this.max_cds
 		// this.min_length = this.track.min_length;
 		this.active = true; // setting all to true now from the start since everything will be loaded on click
 		this.reversed = false;
@@ -27,7 +29,9 @@ format_cdss(CDSs){
 
 reverse(){
 	this.reversed = !this.reversed;
-	var Length = this.track.Length;
+    var Length = this.track.Length;
+    var max_cds = this.max_cds;
+	var spacer = this.spacer;
 	for (var n = 0; n < this.cdss.length; n++) {
 		var cds = this.cdss[n];
 		if(!this.reversed){
@@ -35,8 +39,8 @@ reverse(){
 			var tmp_end = cds.end;
 			var tmp_strand = cds.strand;
 		}else{
-			var tmp_end = Length-cds.start;
-			var tmp_start = Length-cds.end;
+			var tmp_end = max_cds-cds.start+spacer;
+			var tmp_start = max_cds-cds.end+spacer;
 			var tmp_strand = cds.strand*-1;
 		}
 

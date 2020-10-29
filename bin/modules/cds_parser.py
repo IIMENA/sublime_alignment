@@ -10,8 +10,8 @@ def format_tracks(store, regions_clusters_mibig_records, parent, contig, inst_id
         parent_id = inst_id+"_r"+str(parent.get_region_number())
         cdss = parent.cds_children
         parent_length = parent.location.end - parent.location.start
-    elif isinstance(parent,secmet.features.cluster.Cluster):
-        parent_id = inst_id+"_c"+str(parent.get_cluster_number())
+    elif isinstance(parent,secmet.features.protocluster.Protocluster):
+        parent_id = inst_id+"_c"+str(parent.get_protocluster_number())
         cdss = parent.cds_children
         parent_length = parent.location.end - parent.location.start
     elif isinstance(parent,secmet.record.Record):

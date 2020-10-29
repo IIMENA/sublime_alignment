@@ -2,7 +2,8 @@ from antismash.common import secmet
 from antismash.common.secmet.locations import convert_protein_position_to_dna
 from Bio.SeqFeature import FeatureLocation
 
-def get_alignment_location_on_parent(alignment, record, parent, selected):
+def get_alignment_location_on_parent(alignment, record,
+                                     parent, selected):
     if selected == "query":
         selected = ("qseqid", "qstart", "qend")
     else:

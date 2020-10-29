@@ -11,7 +11,8 @@ var flippers = controls_svg.selectAll(".selector_circle")
 
       var flippers_enter = flippers.enter()
       .append("circle")
-      .attr("class", "selector_circle");
+      .attr("class", "selector_circle")
+      .attr("orientation", "normal");
 
 
       flippers.exit().remove();

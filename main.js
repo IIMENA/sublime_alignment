@@ -5,9 +5,9 @@ import {activate_node} from "./js_modules/interactive.js"
 
 function start_network(){
 
-	d3.json("test_data/gene_cluster_by_classes.json").then(function(gc_by_class){
-	d3.json("test_data/graph.json").then(function(graph){
-	d3.json("test_data/product_search.json").then(function(mibig_products){
+	d3.json("data/results/gene_cluster_by_classes.json").then(function(gc_by_class){
+	d3.json("data/results/graph.json").then(function(graph){
+	d3.json("data/results/product_search.json").then(function(mibig_products){
 
 	var active_nodes = []; // set this back to empty on every new selection of GC, will be the data array
 	var node_store = {};
@@ -61,8 +61,6 @@ function start_network(){
 
     d3.selectAll(".network_circle").on("click", function(d){
 		var node_handle = activate_node(d3.select(this), active_nodes, node_store, alignment_store);
-		console.log("Node handle")
-		console.log(node_handle);
 		active_nodes = node_handle.active_nodes; // node_handle is undefined?
 		node_store = node_handle.node_store;
 		alignment_store = node_handle.alignment_store;
